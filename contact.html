@@ -18,12 +18,12 @@
 <section class="contact">
     <h2>Contact Us</h2>
 
-    <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea rows="5" placeholder="Your Message"></textarea>
-        <button type="submit">Send Message</button>
-    </form>
+   <form onsubmit="showPopup(event)">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+</form>
 </section>
 
 <footer class="footer">
@@ -70,7 +70,14 @@
         <p>Designed with ❤ for Fashion</p>
     </div>
 </footer>
+<script>
+function showPopup(event) {
+    event.preventDefault(); // stop form refresh
+    alert("Thank you for contacting us! We will get back to you soon.");
+}
+</script>
 
 
 </body>
 </html>
+
